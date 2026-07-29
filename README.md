@@ -1,3 +1,6 @@
 # WebBootcamp
-Hello
+
+## About
+
+This branch adds an About section.
 

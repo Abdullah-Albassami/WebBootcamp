@@ -6,7 +6,7 @@
 mkdir project
 
 # Create Files
-touch project/ main.py project/README.md
+touch project/main.py project/README.md
 
 # Filling README.md file
 echo "1- created the setup.sh shell script file

@@ -1,4 +1,4 @@
-
+# First part
 student_name = "Abdullah"
 student_age = 26
 course = "Python"
@@ -19,4 +19,12 @@ You are {student_age} years old
 Your current registration status is: {status}
 Thank you {student_name} and best of luck!
 """)
+
+# Second part
+x, y = 0, 1
+x, y = y, x
+print(f"""
+x = {x} 
+y = {y}""")
+
 

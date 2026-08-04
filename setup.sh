@@ -10,6 +10,7 @@ touch project/main.py project/README.md
 
 # Filling README.md file
 echo "
+# Project Instructions
 1. Created the setup.sh shell script file
 2. Accessed the script file using nano
 3. Created the project folder

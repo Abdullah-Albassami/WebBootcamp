@@ -20,7 +20,7 @@ echo "
 7- Commited changes
 8- Pushed the project on github 
 9- Displayed a success message 
-10- Made the script executable using chmod +x setup.sh." >> README.md 
+10- Made the script executable using chmod +x setup.sh." >> project/README.md 
 
 # Initialize Git
 git init

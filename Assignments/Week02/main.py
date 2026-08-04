@@ -21,8 +21,11 @@ Thank you {student_name} and best of luck!
 """)
 
 # Second part
-x, y = 0, 1
+x = 0
+y = 1
+
 x, y = y, x
+
 print(f"""
 x = {x} 
 y = {y}""")

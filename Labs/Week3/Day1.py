@@ -181,23 +181,23 @@
 # # Remember that return ends the current function call immediately.
 # # Define the function before its call is reached in the execution path.
 
-# # TOPIC 12 — FUNCTIONS CAN CONTAIN CONTROL FLOW YOU ALREADY KNOW
+# TOPIC 12 — FUNCTIONS CAN CONTAIN CONTROL FLOW YOU ALREADY KNOW
 
-# # Functions organize logic; they do not replace if statements or loops.
-# # A function can contain if / elif / else statements.
-# # A function can also contain loops.
-# # Parameters provide the input and return exposes the final result.
-# # Combining earlier concepts creates small, reusable program components.
+# Functions organize logic; they do not replace if statements or loops.
+# A function can contain if / elif / else statements.
+# A function can also contain loops.
+# Parameters provide the input and return exposes the final result.
+# Combining earlier concepts creates small, reusable program components.
 
-# # Example
-# def count_even(limit):
-#     count = 0
+# Example
+def count_even(limit):
+    count = 0
 
-#     for number in range(1, limit + 1):
-#         if number % 2 == 0:
-#             count += 1
+    for number in range(1, limit + 1):
+        if number % 2 == 0:
+            count += 1
 
-#     return count
+    return count
 
-# print(count_even(10))
+print(count_even(10))
 

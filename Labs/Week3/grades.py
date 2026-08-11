@@ -1,4 +1,3 @@
-
 def calculate_grade(score):
     if score >= 90:
         return "A"
@@ -11,3 +10,6 @@ def calculate_grade(score):
     else:
         return "F"
 
+
+if __name__ == "grades":
+    print(f"This is from {__name__}")

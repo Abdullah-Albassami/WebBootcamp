@@ -201,25 +201,25 @@ import math
 
 # print(tasks)
 
-# LAB 5
-nums = [11,22,33,44,55,66]
-print(sum(nums))
-print(len(nums))
-print(max(nums))
-print(min(nums))
-print(math.sqrt(max(nums)))
-print(math.__doc__)
-print(nums)
-print(nums.pop(2))
-print(sorted(nums, reverse=True))
+# # LAB 5
+# nums = [11,22,33,44,55,66]
+# print(sum(nums))
+# print(len(nums))
+# print(max(nums))
+# print(min(nums))
+# print(math.sqrt(max(nums)))
+# print(math.__doc__)
+# print(nums)
+# print(nums.pop(2))
+# print(sorted(nums, reverse=True))
 
-# LAB 6
-skills = {"Python", "Django", "Flask", "FastAPI", "Java"}
-skills.add("css")
-skills.add("HTML")
-skills.discard("Java")
+# # LAB 6
+# skills = {"Python", "Django", "Flask", "FastAPI", "Java"}
+# skills.add("css")
+# skills.add("HTML")
+# skills.discard("Java")
 
-print(skills)
+# print(skills)
 
 
 

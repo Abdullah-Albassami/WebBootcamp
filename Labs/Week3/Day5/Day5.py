@@ -190,16 +190,16 @@
 # ]
 # print(counted_chars)
 
-# LAB 9: generator expression + next() + generator exhaustion
+# # LAB 9: generator expression + next() + generator exhaustion
 
-new_names = ["Mada", "Khadija", "Yamam", "Mashael"]
+# new_names = ["Mada", "Khadija", "Yamam", "Mashael"]
 
-upp = (
-    name.upper()
-    for name in new_names
-)
+# upp = (
+#     name.upper()
+#     for name in new_names
+# )
 
-print(next(upp))
+# print(next(upp))
 # print(next(upp))
 # print(list(upp))
 # print("-"*5)

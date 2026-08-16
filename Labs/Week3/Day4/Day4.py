@@ -66,17 +66,23 @@
 # ]
 
 # domains = {
-#     email.split("@")[1].lower()
+#     email.split("@")[1].lower() # foucs on split ((important))
 #     for email in emails
 # }
 # print(domains)
 
 # Dictionary comperhansions build mappings
 
-numbers = range(1, 6)
-squares = {
-    number: number ** 2
-    for number in numbers
-}
-print(squares)
+# numbers = range(1, 6)
+# squares = {
+#     number: number ** 2
+#     for number in numbers
+# }
+# print(squares)
 # task reasearch creating a dict inside a tuple and modfy it
+
+# tup = ("A", 66, {"Brand": "Toyota", "Name": "RAV-4", "Year": 2025})
+
+# tup[2]["Name"] = "Camry"
+
+# print(tup)

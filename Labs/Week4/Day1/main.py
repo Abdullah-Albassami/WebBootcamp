@@ -6,7 +6,7 @@
 #     pass
 # print(Student)
 # print(type(Student))
-# calling a class creates an object
+# # calling a class creates an object
 
 # class Student:
 #     pass
@@ -35,8 +35,8 @@
 #     def interduce(self):
 #         print(f"I am {self.name}") # it is a bad practice to use print insde of a class
 
-# Student = Student("Omar")
-# Student.interduce()
+# student = Student("Omar")
+# student.interduce()
         
 # # Instance attributes belong to one object
 # class Student:
@@ -142,7 +142,7 @@
 # print(first.value) # 1
 # print(second.value) # 0
 
-# # Collection can store objects 
+# # Collections Can Store Objects 
 # class Student:
 #     def __init__(self, name):
 #         self.name = name
@@ -154,11 +154,11 @@
 #     Student("Omar"),
 #     Student("Lina")
 # ]
-# print(students[0].greet())
+# # print(students[0].greet())
 # for student in students:
 #     print(student.greet())
 
-# # type and isinstance identfy object types
+# # type() and isinstance() Identify Object Types
 
 # class Student:
 #     pass
@@ -166,9 +166,12 @@
 # student = Student()
 # print(type(student))
 # print(type(student) is Student)
-# print(isinstance(student, Student))
+# print(isinstance(student, Student)) # The syntax is: isinstance(object, Class)
 
-## Class, Object, and Method Play Different Roles
+# Class, Object, and Method Play Different Roles
+#  * Class: blueprint that defines shared structure and behavior.
+#  * Object: instance that stores its own independent state.
+#  * Method: behavior that reads or changes an object's state.
 
 # # Attribute Access Is Public by Default
 # class Student:
@@ -202,3 +205,8 @@
 # print(student.name, student.average())
 
 # OOP Errors Usually Reveal a Broken Object Boundary
+#  * Check which object owns the state, which method is being called,and whether initialization completed.
+#  * Forgetting self in an instance method causes argument errors.
+#  * Using a class attribute for changing instance data can accidentally share state between objects.
+#  * Misspelled attributes can create errors or unintended new attributes.
+#  * Keep each class focused; do not turn one class into the entire application.

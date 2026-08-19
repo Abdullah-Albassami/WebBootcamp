@@ -1,5 +1,5 @@
 # # =========================================================
-# # DAY 08 — OPERATORS, STRINGS, MUTABILITY, AND IDENTITY
+# # WEEK 2: DAY 2 — OPERATORS, STRINGS, MUTABILITY, AND IDENTITY
 # # =========================================================
 
 # # TOPIC 1 — ARITHMETIC OPERATORS AND PEMDAS

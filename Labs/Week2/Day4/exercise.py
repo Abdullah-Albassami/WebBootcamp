@@ -1,5 +1,5 @@
 # =========================================================
-# EXERCISE — STUDENT REGISTRATION VALIDATOR
+# EXERCISE week 2 day 4 — STUDENT REGISTRATION VALIDATOR
 # =========================================================
 
 # Requirements:

@@ -11,16 +11,12 @@
 #         self._legs = number
 
 #     def talk(self, sound):
+#         self.sound = sound
 #         return (f"{self.name} says: {sound}!")
 
-# myDog = Dog("Peter")
-# print(myDog.name)
-# print(myDog._legs)
-# Dog._legs = 3
-# print(myDog._legs)
-# print(Dog._legs)
-# s = myDog.talk("Woof")
-# print(s)
+# dog1 = Dog("Peter")
+# print(dog1.talk("hello"))
+# print(dog1.sound)
 
 # # Week 4 Day2: ==> File Handling & Exception Managment
 
@@ -52,8 +48,8 @@
 # "a" append after existing content
 # "x" create only when absent
 
-with open ("notes.txt", "x", encoding="utf-8") as file:
-    file.write("New note\n")
+# with open ("notes.txt", "x", encoding="utf-8") as file:
+#     file.write("New note\n")
 
 # #  with closes the file automatically
 # from pathlib import Path

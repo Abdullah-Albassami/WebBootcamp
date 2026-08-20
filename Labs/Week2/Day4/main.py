@@ -1,5 +1,5 @@
 # # =========================================================
-# # DAY 09 — CONDITIONAL STATEMENTS
+# # DAY 4 — CONDITIONAL STATEMENTS
 # # =========================================================
 
 # # TOPIC 1 — IF STATEMENTS

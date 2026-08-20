@@ -24,6 +24,10 @@ The roadmap covers:
 - Week 3 — Functions, Namespaces, Collections & Comprehensions
 - Week 4 — OOP, File Handling & Exception Handling
 
+## Roadmap
+
+📄 [View the Python Learning Roadmap](roadmap.pdf)
+
 ## Purpose
 
 The roadmap provides a visual summary of our progress and makes it easier to review previously learned Python concepts and understand how they relate to each other.

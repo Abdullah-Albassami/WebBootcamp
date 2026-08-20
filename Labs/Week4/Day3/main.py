@@ -144,7 +144,7 @@
 #     s.welcome()
 
 # # LABS for file handling
-# # LAB 1
+# # LAB 4
 # from pathlib import Path
 
 # path = Path("home") / "students" / "students.txt" 
@@ -157,3 +157,7 @@
 # print(path.is_file())
 
 # path.write_text("Welcome to class", encoding="utf-8")
+
+
+
+        

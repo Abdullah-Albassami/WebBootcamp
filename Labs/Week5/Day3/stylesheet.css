@@ -1,0 +1,22 @@
+p{
+    color: greenyellow;
+}
+
+.paragraph{
+    padding: 10px;
+    color: grey;
+    font-size: large;
+}
+
+
+#main-paragraph {
+    width: 300px;
+    color: blue;
+    background-color: grey;
+    
+}
+
+
+#main-paragraph:hover{
+    color: chocolate;
+}

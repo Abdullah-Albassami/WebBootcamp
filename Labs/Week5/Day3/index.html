@@ -1,0 +1,179 @@
+<!-- Lab 1 -->
+<!-- <-1 Crete a form wrapper>
+    <2- add text + email input >
+    < 3- add select, checkbox and textarea>
+    < 4- add label for all fields>
+    < 5- check name attributes before submision> -->
+
+    <!-- Lab 2
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    
+    <p class="paragraph" id="main-paragraph">The Lab is to practice using classes and IDs in HTML to be used in CSS</p>
+    
+</body>
+</html> -->
+
+<!-- LAB 3 -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <!-- from Lab 1 -->
+<!-- <div id="mainDiv">
+<form class="main-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <br>
+
+    <label for="course">Course:</label>
+    <select id="course" name="course">
+        <option value="python">Python</option>
+        <option value="html">HTML</option>
+    </select>
+    <br>
+
+    <label>
+        <input type="checkbox" name="agreement">
+        I agree to the terms
+    </label>
+    <br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+</div>
+    
+</body>
+</html>  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <main>
+    <section>
+        <h2>About the Program</h2>
+
+        <img src="django-python-logo.png" alt="Python and Django logo">
+
+        <p>
+            The Python Experts Bootcamp is an intensive training program
+            sponsored by Python Experts. It helps aspiring developers build
+            practical skills in Python, web development, databases, and Django
+            through guided lessons, hands-on labs, and real-world projects.
+        </p>
+    </section>
+
+    <section>
+        <h2>Fill in the Registration Form Below</h2>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Course Registration</legend>
+
+                <label for="course">Choose Course:</label>
+
+                <select id="course" name="course" required>
+                    <option value="">Select a course</option>
+                    <option value="python">Python</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="fastapi">FastAPI</option>
+                    <option value="django">Django</option>
+                </select>
+
+                <p>Learning Type:</p>
+
+                <input
+                    type="radio"
+                    id="online"
+                    name="learning_type"
+                    value="online"
+                    required
+                >
+                <label for="online">Online</label>
+
+                <input
+                    type="radio"
+                    id="onsite"
+                    name="learning_type"
+                    value="onsite"
+                >
+                <label for="onsite">On-site</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="full-name">Full Name:</label>
+                <input
+                    type="text"
+                    id="full-name"
+                    name="full_name"
+                    required
+                >
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+                <br><br>
+
+                <label for="birth-date">Date of Birth:</label>
+                <input
+                    type="date"
+                    id="birth-date"
+                    name="birth_date"
+                    min="1965-08-26"
+                    max="2008-08-25"
+                    required
+                >
+
+                <br><br>
+
+                <input
+                    type="checkbox"
+                    id="agree"
+                    name="agree"
+                    required
+                >
+                <label for="agree">I agree to the terms</label>
+            </fieldset>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

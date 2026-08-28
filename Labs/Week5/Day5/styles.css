@@ -1,0 +1,42 @@
+.cta {
+    background: black;
+    color: whitesmoke;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.cta:hover,
+.cta:focus {
+    transform: translateY(-4px) scale(1.1);
+    color: black;
+    background: whitesmoke;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.hero-text {
+    opacity: 0;
+    animation: fadeIn 1s ease .25s forwards;
+}
+
+.loader {
+    opacity: 0;
+    animation: fadeIn 1s ease .5s forwards;
+}

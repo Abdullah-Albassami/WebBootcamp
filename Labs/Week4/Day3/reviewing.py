@@ -1,4 +1,6 @@
 from pathlib import Path
+import json
+import csv
 
 # # Task 1
 # path = Path("data") / "students" / "scores.txt"
@@ -67,7 +69,7 @@ from pathlib import Path
 #     print("File unavailable")
 
 # # Task 11
-import csv
+
 # p = Path("data") / "students" / "students.csv"
 # with p.open("w", encoding="utf-8", newline="") as f:
 #     writer = csv.writer(f)
@@ -85,7 +87,7 @@ import csv
 #         print(r)
 
 # # Task 13
-import json
+
 # p = Path("data") / "students" / "students.json"
 # students = [
 #     {"name": "Sara", "score": 92},
@@ -165,5 +167,46 @@ import json
 # except StudentNotFoundError as e:
 #      print(e)
 
+# Task 24 — Comprehensive Practice
+# Part 1
+p = Path("data") / "students" / "students.json"
+p.parent.mkdir(parents=True, exist_ok=True)
+
+students = [
+    {"name": "Sara", "score": 92},
+    {"name": "Omar", "score": 85},
+    {"name": "Ali", "score": 76}
+]
+
+# with p.open("w", encoding="utf-8") as f:
+#     json.dump(students, f, indent=2)
+
+# print(p.read_text(encoding="utf-8"))
+# # Part 2
+# def load_students(path):
+#     try:
+#         with path.open("r", encoding="utf-8") as f:
+#             loaded = json.load(f)
+#         return loaded
+#     except FileNotFoundError as nf:
+#         print(nf)
+#     except json.JSONDecodeError as invalidJSON:
+#         print(invalidJSON)
+
+# readIt = load_students(p)
+# print(readIt)
+# part 3
+
+def validate_score(score):
+    if not 0 <= score <= 100:
+        raise ValueError("A score must be between 0 and 100")
+    return score
+
+vScore1 = validate_score(100)
+print(vScore1)
+vScore = validate_score(120)
+print(vScore)
+        
 
 
+    

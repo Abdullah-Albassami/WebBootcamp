@@ -1,59 +1,110 @@
+
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    min-height: 100vh;
     margin: 0;
+    font-family: Arial, sans-serif;
+}
 
+
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    padding: 20px;
 }
 
-#mainDiv {
-    width: auto;
-    max-width: none;
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
-.main-form {
-    width: 650px;
-    max-width: 80vw;
-    box-sizing: border-box;
-
-    background-color: lightcyan;
-    padding: 30px;
-    border: 1px solid black;
-    border-radius: 10px;
+.nav-links a {
+    text-decoration: none;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
+
+
+.hero {
+    display: flex;
+
+    /* Allows content to wrap instead of becoming too narrow */
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 20px;
+    padding: 40px;
 }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+
+
+.hero-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 250px;
+}
+
+
+.hero-image img {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    box-sizing: border-box;
+    height: auto;
 }
 
-textarea {
-    min-height: 100px;
+
+
+.courses {
+    padding: 40px;
 }
 
-button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    color: white;
-    background-color: blue;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+.course-grid {
+    display: grid;
+
+    
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
 }
 
-button:hover {
-    background-color: darkblue;
+
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+
+
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    
+
+    .courses {
+        padding: 20px;
+    }
 }

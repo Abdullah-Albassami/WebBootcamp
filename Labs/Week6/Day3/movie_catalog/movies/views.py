@@ -11,7 +11,7 @@ def movie_list(request):
     return render(request, "movies/movie_list.html", {"movies": movies})
 
 
-def movie_detail(request, movie_id):
-    movie = next((movie for movie in movies if movie["id"] == movie_id), None)
+def movie_detail(request, id):
+    movie = movies[id - 1]
 
     return render(request, "movies/movie_detail.html", {"movie": movie})

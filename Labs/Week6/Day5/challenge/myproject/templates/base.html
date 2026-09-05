@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        My Lab
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="{% url 'dashboard:home' %}">Dashboard</a>
+        <a href="{% url 'courses:list' %}">Courses</a>
+        <a href="{% url 'users:login' %}">Login</a>
+        <a href="{% url 'users:profile' %}">Profile</a>
+        <a href="{% url 'payments:checkout' %}">Checkout</a>
+    </nav>
+
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

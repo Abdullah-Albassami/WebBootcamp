@@ -14,7 +14,6 @@ def book_list(request):
 
 def book_detail(request, id):
     book = books[id -1]
-    # next(book for book in books if book["id"] == id)
 
     return render(request, "library/book_detail.html", {"book": book})
 

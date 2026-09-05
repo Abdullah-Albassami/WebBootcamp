@@ -1,5 +1,5 @@
 """
-URL configuration for config project.
+URL configuration for mylab project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.1/topics/http/urls/
@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from pages.views import custom_404
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("library.urls")),
-    # path("books/", include("library.urls")),
-    
+    path("", include("pages.urls")),
+    path("blog/", include("blog.urls")),
 ]
+
+handler404 = custom_404

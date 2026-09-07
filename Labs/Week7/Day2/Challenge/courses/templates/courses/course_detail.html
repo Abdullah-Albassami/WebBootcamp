@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ course.name|title }}
+{% endblock %}
+
+{% block content %}
+
+{% if course %}
+
+    <h1>{{ course.name|title }}</h1>
+
+    <img
+        src="{% static 'images/' %}{{ course.image }}"
+        alt="{{ course.name }}"
+    >
+
+    <p>Level: {{ course.level|title }}</p>
+
+    {% if course.student_count == 0 %}
+        <p>No students enrolled yet.</p>
+    {% else %}
+        <p>Students: {{ course.student_count }}</p>
+    {% endif %}
+
+    <p>{{ course.description|safe }}</p>
+
+{% else %}
+
+    <p>Course not found.</p>
+
+{% endif %}
+
+{% endblock %}

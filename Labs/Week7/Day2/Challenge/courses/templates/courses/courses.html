@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Courses
+{% endblock %}
+
+{% block content %}
+
+<h1>Courses</h1>
+
+{% for course in courses %}
+
+    {% include "components/course_card.html" %}
+
+{% empty %}
+
+    <p>No courses available.</p>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="course-card">
+
+    <img
+        src="{% static 'images/' %}{{ course.image }}"
+        alt="{{ course.name }}"
+    >
+
+    <h2>{{ course.name|title }}</h2>
+
+    <p>Level: {{ course.level|title }}</p>
+
+    {% if course.student_count == 0 %}
+        <p>No students enrolled yet.</p>
+    {% else %}
+        <p>Students: {{ course.student_count }}</p>
+    {% endif %}
+
+    <p>{{ course.description|truncatewords:8 }}</p>
+
+    <a href="{% url 'courses:course_detail' course.id %}">
+        View Course
+    </a>
+
+</div>

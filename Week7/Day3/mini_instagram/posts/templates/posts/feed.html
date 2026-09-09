@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Instagram</title>
+
+    <link rel="stylesheet" href="{% static 'css/feed.css' %}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Mini Instagram 📸</h1>
+
+        <!-- Upload Form -->
+        <div class="upload-box">
+
+            <h2>Create Post</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <p>
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {{ form.username.errors }}
+            </p>
+
+            <p>
+                {{ form.description.label_tag }}
+                {{ form.description }}
+                {{ form.description.errors }}
+            </p>
+
+            <p>
+                <label for="id_image">Image:</label>
+
+                <input
+                    type="file"
+                    name="image"
+                    id="id_image"
+                >
+
+                {{ form.image.errors }}
+            </p>
+
+            <button type="submit">
+                Upload Post
+            </button>
+
+        </form>
+
+        </div>
+
+
+        <!-- Feed -->
+        <div class="feed">
+
+            {% for post in posts %}
+
+                <div class="post">
+
+                    <h3>@{{ post.username }}</h3>
+
+                    <img
+                        src="{{ post.image.url }}"
+                        alt="Post image"
+                    >
+
+                    <p>
+                        {{ post.description }}
+                    </p>
+
+
+                    <div class="likes">
+
+                        {% if post.likes == 0 %}
+
+                            <span>
+                                Be the first to like this
+                            </span>
+
+                        {% else %}
+
+                            <span>
+                                {{ post.likes }} likes
+                            </span>
+
+                        {% endif %}
+
+
+                        <form
+                            method="POST"
+                            action="{% url 'like_post' post.id %}"
+                        >
+
+                            {% csrf_token %}
+
+                            <button type="submit">
+                                ❤️ Like
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <p>No posts yet.</p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

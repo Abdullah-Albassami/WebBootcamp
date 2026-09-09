@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #241b2f,
+            #3b233c,
+            #4a2b3d
+        );
+
+    color: #f0e8ed;
+
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+
+/* TITLE */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+
+    background: linear-gradient(
+        45deg,
+        #f9a66c,
+        #e96d93,
+        #c96db3,
+        #9b72cf
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* UPLOAD FORM + POSTS */
+
+.upload-box,
+.post {
+    background: #302631;
+
+    border: 1px solid #554052;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+}
+
+.upload-box h2 {
+    margin-top: 0;
+    color: #f2dce8;
+}
+
+
+/* FORM */
+
+.upload-box p {
+    margin-bottom: 18px;
+}
+
+.upload-box label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #dcbccc;
+}
+
+.upload-box input,
+.upload-box textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin-top: 5px;
+
+    background: #251e28;
+
+    color: #f4edf1;
+
+    border: 1px solid #62495e;
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.upload-box input:focus,
+.upload-box textarea:focus {
+    border-color: #d46c9f;
+
+    box-shadow: 0 0 0 2px rgba(212, 108, 159, 0.15);
+}
+
+.upload-box textarea {
+    resize: vertical;
+}
+
+
+/* BUTTONS */
+
+button {
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: #fff;
+
+    font-weight: bold;
+
+    background: linear-gradient(
+        45deg,
+        #9b4dca,
+        #cc4c9a,
+        #e15f76,
+        #e88a55
+    );
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+/* POSTS */
+
+.post h3 {
+    margin-top: 0;
+
+    color: #e4a7ca;
+}
+
+.post p {
+    line-height: 1.5;
+
+    color: #e0d5dc;
+}
+
+.post img {
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    margin: 10px 0;
+
+    border: 1px solid #4c3b49;
+}
+
+
+/* LIKES */
+
+.likes {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #4c3a48;
+}
+
+.likes span {
+    color: #e59abd;
+
+    font-weight: bold;
+}
+
+.likes form {
+    margin: 0;
+}

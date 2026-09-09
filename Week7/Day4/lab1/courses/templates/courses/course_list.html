@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Course Catalog</title>
+</head>
+
+<body>
+
+    <h1>Course Catalog</h1>
+
+
+    <h2>Search and Filter</h2>
+
+    <form method="get">
+
+        <input
+            type="text"
+            name="search"
+            placeholder="Search courses"
+            value="{{ search }}"
+        >
+
+        <select name="category">
+
+            <option value="">All Categories</option>
+            <option value="Programming">Programming</option>
+            <option value="Networking">Networking</option>
+            <option value="Security">Security</option>
+
+        </select>
+
+
+        <select name="difficulty">
+
+            <option value="">All Difficulties</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+
+        </select>
+
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+
+    <hr>
+
+
+    <h2>Courses</h2>
+
+    {% for course in courses %}
+
+        <h3>
+            <a href="{% url 'courses:detail' course.id %}">
+                {{ course.title }}
+            </a>
+        </h3>
+
+        <p>
+            Category: {{ course.category }}
+        </p>
+
+        <p>
+            Difficulty: {{ course.difficulty }}
+        </p>
+
+        <hr>
+
+    {% empty %}
+
+        <p>No courses found.</p>
+
+    {% endfor %}
+
+
+    {% if total_pages > 0 %}
+
+        <h2>Pagination</h2>
+
+
+        {% if has_previous %}
+
+            <a href="?page={{ page|add:'-1' }}">
+                ← Previous
+            </a>
+
+        {% else %}
+
+            <span>
+                ← Previous
+            </span>
+
+        {% endif %}
+
+
+        <span>
+            Page {{ page }} of {{ total_pages }}
+        </span>
+
+
+        {% if has_next %}
+
+            <a href="?page={{ page|add:'1' }}">
+                Next →
+            </a>
+
+        {% else %}
+
+            <span>
+                <!-- Next → -->
+            </span>
+
+        {% endif %}
+
+    {% endif %}
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    <h1>{{ product.name }}</h1>
+
+    <p>
+        Category: {{ product.category }}
+    </p>
+
+    <p>
+        Price: ${{ product.price }}
+    </p>
+
+    <p>
+        Rating: {{ product.rating }}
+    </p>
+
+
+    <hr>
+
+
+    <!-- Tabs -->
+
+    <a href="?tab=details">
+        Details
+    </a>
+
+    |
+
+    <a href="?tab=reviews">
+        Reviews
+    </a>
+
+    |
+
+    <a href="?tab=shipping">
+        Shipping
+    </a>
+
+
+    <hr>
+
+
+    {% if tab == "details" %}
+
+        <h2>Details</h2>
+
+        <p>
+            {{ product.description }}
+        </p>
+
+
+    {% elif tab == "reviews" %}
+
+        <h2>Reviews</h2>
+
+        <p>
+            Customer rating: {{ product.rating }}
+        </p>
+
+
+    {% elif tab == "shipping" %}
+
+        <h2>Shipping</h2>
+
+        <p>
+            Standard shipping takes 3-5 business days.
+        </p>
+
+    {% endif %}
+
+
+    <br>
+
+    <a href="{% url 'products:product_list' %}">
+        Back to Products
+    </a>
+
+</body>
+
+</html>

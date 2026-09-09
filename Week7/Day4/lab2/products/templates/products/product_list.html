@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Explorer</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    <h1>Product Explorer</h1>
+
+    <!-- Search / filter / sort form -->
+    <form method="GET">
+
+        <label>
+            Search:
+            <input
+                type="text"
+                name="q"
+                value="{{ q }}"
+            >
+        </label>
+
+        <br><br>
+
+        <label>
+            Category:
+            <select name="category">
+
+                <option value="">All</option>
+
+                <option
+                    value="electronics"
+                    {% if category == "electronics" %}selected{% endif %}
+                >
+                    Electronics
+                </option>
+
+                <option
+                    value="accessories"
+                    {% if category == "accessories" %}selected{% endif %}
+                >
+                    Accessories
+                </option>
+
+                <option
+                    value="furniture"
+                    {% if category == "furniture" %}selected{% endif %}
+                >
+                    Furniture
+                </option>
+
+            </select>
+        </label>
+
+        <br><br>
+
+        <label>
+            Minimum Price:
+
+            <input
+                type="number"
+                name="min_price"
+                value="{{ min_price }}"
+            >
+        </label>
+
+        <br><br>
+
+        <label>
+            Sort:
+
+            <select name="sort">
+
+                <option
+                    value="name"
+                    {% if sort == "name" %}selected{% endif %}
+                >
+                    Name
+                </option>
+
+                <option
+                    value="price"
+                    {% if sort == "price" %}selected{% endif %}
+                >
+                    Price
+                </option>
+
+                <option
+                    value="rating"
+                    {% if sort == "rating" %}selected{% endif %}
+                >
+                    Rating
+                </option>
+
+            </select>
+        </label>
+
+        <br><br>
+
+        <button type="submit">
+            Apply
+        </button>
+
+    </form>
+
+
+    <hr>
+
+
+    <!-- Product results -->
+
+    {% for product in page_obj %}
+
+        <h2>
+            <a href="{% url 'products:product_detail' product.id %}">
+                {{ product.name }}
+            </a>
+        </h2>
+
+        <p>
+            Category: {{ product.category }}
+        </p>
+
+        <p>
+            Price: ${{ product.price }}
+        </p>
+
+        <p>
+            Rating: {{ product.rating }}
+        </p>
+
+        <hr>
+
+    {% empty %}
+
+        <p>No products found.</p>
+
+    {% endfor %}
+
+
+    <!-- Pagination -->
+
+    <div>
+
+        {% if page_obj.has_previous %}
+
+            <a href="?page={{ page_obj.previous_page_number }}&q={{ q }}&category={{ category }}&min_price={{ min_price }}&sort={{ sort }}">
+                Previous
+            </a>
+
+        {% endif %}
+
+
+        <span>
+            Page {{ page_obj.number }}
+            of {{ page_obj.paginator.num_pages }}
+        </span>
+
+
+        {% if page_obj.has_next %}
+
+            <a href="?page={{ page_obj.next_page_number }}&q={{ q }}&category={{ category }}&min_price={{ min_price }}&sort={{ sort }}">
+                Next
+            </a>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>

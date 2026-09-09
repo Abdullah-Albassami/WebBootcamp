@@ -1,4 +1,4 @@
-# 🚀 Web Development Bootcamp
+# 💻 Web Development Bootcamp
 
 This repository documents my progress through a Python Web Development Bootcamp focused on practical programming, problem-solving, and building web applications with Python and Django.
 

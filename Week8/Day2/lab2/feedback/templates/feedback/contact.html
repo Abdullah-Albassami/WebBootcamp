@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback Form</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Feedback Form</h1>
+
+    <p>Send us your feedback.</p>
+
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+
+        <!-- Name -->
+
+        <div class="form-group {% if form.name.errors %}invalid{% endif %}">
+
+            <label for="{{ form.name.id_for_label }}">
+                Name
+            </label>
+
+            {{ form.name }}
+
+            {% for error in form.name.errors %}
+
+                <p class="error">
+                    {{ error }}
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- Email -->
+
+        <div class="form-group {% if form.email.errors %}invalid{% endif %}">
+
+            <label for="{{ form.email.id_for_label }}">
+                Email
+            </label>
+
+            {{ form.email }}
+
+            {% for error in form.email.errors %}
+
+                <p class="error">
+                    {{ error }}
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- Message -->
+
+        <div class="form-group {% if form.message.errors %}invalid{% endif %}">
+
+            <label for="{{ form.message.id_for_label }}">
+                Message
+            </label>
+
+            {{ form.message }}
+
+            {% for error in form.message.errors %}
+
+                <p class="error">
+                    {{ error }}
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- Rating -->
+
+        <div class="form-group {% if form.rating.errors %}invalid{% endif %}">
+
+            <label for="{{ form.rating.id_for_label }}">
+                Rating (1-5)
+            </label>
+
+            {{ form.rating }}
+
+            {% for error in form.rating.errors %}
+
+                <p class="error">
+                    {{ error }}
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+
+        <button type="submit">
+            Submit Feedback
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

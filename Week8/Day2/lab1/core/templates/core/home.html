@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Preferences and Cart</title>
+
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+
+<body class="{{ theme }}">
+
+    <div class="container">
+
+        <h1>Preferences and Cart</h1>
+
+        <h2>Theme</h2>
+
+        <p>Current theme: {{ theme }}</p>
+
+        <a href="{% url 'set_theme' 'light' %}">Light</a>
+        <a href="{% url 'set_theme' 'dark' %}">Dark</a>
+
+        <hr>
+
+        <h2>Cart</h2>
+
+        <p>Cart count: {{ cart_count }}</p>
+
+        <a href="{% url 'add_to_cart' 1 %}">Add Product 1</a>
+        <a href="{% url 'add_to_cart' 2 %}">Add Product 2</a>
+
+        <br><br>
+
+        <a href="{% url 'clear_cart' %}">Clear Cart</a>
+
+    </div>
+
+</body>
+
+</html>
